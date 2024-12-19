@@ -52,13 +52,18 @@
                                     <td><?php echo $reg_row['password']; ?></td>
                                     <td><?php echo $reg_row['phone']; ?></td>
                                     <td>
-                                        <a href="register-edit.php?id=<?php echo $reg_row['Id']; ?>" class="btn btn-primary ">Edit</a>
+                                        <a href="register-edit.php?id=<?php echo $reg_row['Id']; ?>" data-bs-toggle="collapse" class="btn btn-outline-primary ">Edit</a>
                                     </td>
                                     <td>
-                                        <a href="register-delete.php" class="btn btn-danger ">Delete</a>
+                                        <form action="code.php" method="post">
+                                            <input type="hidden" name="delete_id" value="<?php echo $reg_row['Id']; ?>">
+                                            <button type="submit" name="register_delete_btn" data-bs-toggle="collapse" class="btn btn-outline-danger ">Delete</button>
+                                        </form>
+                                   
                                     </td>
-                                </tr>
-                                <?php } ?>
+                                </tr> 
+                                <?php }
+                            ?>
                             </tbody>
                         </table>
                         <?php

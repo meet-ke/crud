@@ -47,4 +47,22 @@
             echo "Data Not Updated";
         }
     }
+
+    if (isset($_POST['register_delete_btn']))
+    {
+        $delete_id = $_POST['delete_id'];
+
+        $reg_query = "DELETE FROM register WHERE id='delete_id'";
+        $reg_query = mysqli_query($conn, $reg_query);
+
+        if($reg_query)
+        {
+            header("Location:index.php");
+        }
+        else
+        {
+            echo "Data Not Deleted";
+        }
+    }
+
 ?>
