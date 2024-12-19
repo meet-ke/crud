@@ -52,7 +52,7 @@
                         </div>
 
                         <a href="index.php" class="btn btn-danger">Cancel</a>
-                        <button type="submit" name="register_btn" class="btn btn-primary">Submit</button>
+                        <button type="submit" name="register_Edit_btn" class="btn btn-primary">Update</button>
                         
                     </form>
                 </div>
