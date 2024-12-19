@@ -36,5 +36,6 @@
         $phone = $_POST['phone_namber'];
 
         $query_update = "UPDATE register SET fname='$fname',lname='$lname',email='$email',password='$password',phone='$phone' WHERE id='$update_id'";
+        $query_update_run =mysqli_query($conn, $query_update);
     }
 ?>
