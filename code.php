@@ -25,4 +25,16 @@
             header ('location:register.php');
         }
     }
+
+    if (isset($_POST['register_update_btn']))
+    {
+        $update_id = $_POST['edit_id'];
+        $fname = $_POST['first_name'];
+        $lname = $_POST['last_name'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $phone = $_POST['phone_namber'];
+
+        $query_update = "UPDATE register SET fname='$fname',lname='$lname',email='$email',password='$password',phone='$phone' WHERE id='$update_id'";
+    }
 ?>

@@ -26,6 +26,7 @@
                 </div>          
                 <div class="card-body">
                     <form action="code.php" method="POST">
+                        <input type="text" name="edit_id" class="form-control" value="<?php echo $row['edit_id']; ?>">
                         <div class="form-group">
                             <label>First Name</label>
                             <input type="text" name="first_name" class="form-control" value="<?php  echo $row['fname']; ?>">
@@ -52,7 +53,7 @@
                         </div>
 
                         <a href="index.php" class="btn btn-danger">Cancel</a>
-                        <button type="submit" name="register_Edit_btn" class="btn btn-primary">Update</button>
+                        <button type="submit" name="register_update_btn" class="btn btn-primary">Update</button>
                         
                     </form>
                 </div>
