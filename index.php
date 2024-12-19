@@ -55,7 +55,7 @@
                                         <a href="register-edit.php?id=<?php echo $reg_row['Id']; ?>" class="btn btn-primary ">Edit</a>
                                     </td>
                                     <td>
-                                        <a href="register-delete.php" class="btn btn-primary ">Delete</a>
+                                        <a href="register-delete.php" class="btn btn-danger ">Delete</a>
                                     </td>
                                 </tr>
                                 <?php } ?>

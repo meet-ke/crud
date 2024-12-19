@@ -26,7 +26,8 @@
                 </div>          
                 <div class="card-body">
                     <form action="code.php" method="POST">
-                        <input type="text" name="edit_id" class="form-control" value="<?php echo $row['edit_id']; ?>">
+
+                        <input type="hidden" name="edit_id" class="form-control" value="<?php echo $row['Id']; ?>">
                         <div class="form-group">
                             <label>First Name</label>
                             <input type="text" name="first_name" class="form-control" value="<?php  echo $row['fname']; ?>">

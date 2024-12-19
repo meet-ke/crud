@@ -35,7 +35,16 @@
         $password = $_POST['password'];
         $phone = $_POST['phone_namber'];
 
-        $query_update = "UPDATE register SET fname='$fname',lname='$lname',email='$email',password='$password',phone='$phone' WHERE id='$update_id'";
-        $query_update_run =mysqli_query($conn, $query_update);
+        $query_update = "UPDATE register SET fname='$fname', lname='$lname' , email='$email' , password='$password' , phone='$phone' WHERE id='$update_id'";
+        $query_update_run = mysqli_query($conn,  $query_update);
+
+        if($query_update_run)
+        {
+            header("Location:index.php");
+        }
+        else
+        {
+            echo "Data Not Updated";
+        }
     }
 ?>
